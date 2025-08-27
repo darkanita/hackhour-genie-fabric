@@ -8,8 +8,8 @@ This repository contains all resources and setup guides to prepare your environm
 
 ## ✅ Prerequisites
 Before starting, make sure you have:  
-- 🔹 An active **Databricks workspace** with Unity Catalog enabled.  
-- 🔹 Access to **Microsoft Fabric** with at least **F2 capacity**.  
+ 🔹 An active **Databricks workspace** with Unity Catalog enabled.  
+ 🔹 Access to **Microsoft Fabric** with at least **F2 capacity**.  
 
 ---
 
@@ -148,8 +148,10 @@ During the Hack Hour, you’ll explore both platforms, compare features, and exp
 ---
 
 ## 📚 Resources
-- [Databricks Genie](https://www.databricks.com/product/genie)  
-- [Microsoft Fabric](https://learn.microsoft.com/fabric/)  
+- [Databricks AI/BI](https://learn.microsoft.com/en-us/azure/databricks/ai-bi/)  
+- [Databricks Dashboards](https://learn.microsoft.com/en-us/azure/databricks/dashboards/) 
+- [Databricks Genie](https://learn.microsoft.com/en-us/azure/databricks/genie/)  
+- [Microsoft Fabric Data Agent](https://learn.microsoft.com/en-us/fabric/data-science/concept-data-agent)  
 - [Unity Catalog Docs](https://learn.microsoft.com/azure/databricks/data-governance/unity-catalog/)  
 - [Fabric Lakehouse Docs](https://learn.microsoft.com/fabric/data-engineering/lakehouse-overview)  
 
