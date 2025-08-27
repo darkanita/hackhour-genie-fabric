@@ -6,6 +6,13 @@ This repository contains all resources and setup guides to prepare your environm
 
 ---
 
+## ✅ Prerequisites
+Before starting, make sure you have:  
+- 🔹 An active **Databricks workspace** with Unity Catalog enabled.  
+- 🔹 Access to **Microsoft Fabric** with at least **F2 capacity**.  
+
+---
+
 ## 📋 Agenda
 1. Welcome & Kickoff  
 2. From BI → AI/BI vision  
@@ -27,12 +34,11 @@ Go to **Catalog** → **Add data → Create a catalog**.
 
 ### 2. Create a Catalog
 ![Step 2](media/efb7952c-2f2b-4cac-b58a-4e488ae5c3f7.png)  
-![Step 2 Confirmation](b73147e6-80d0-49cf-bce9-88993ec40147.png)  
 - Name: `hack_hours_dbws`  
 - Type: `Standard`  
 - Storage: default workspace location  
 - Click **Create**  
-
+![Step 2 Confirmation](media/b73147e6-80d0-49cf-bce9-88993ec40147.png)  
 ✅ You’ll see *Catalog created!*  
 
 ### 3. Create a Schema
@@ -59,13 +65,48 @@ Repeat for `customers`, `orders`, `opportunities`.
 ### 7. Run Queries
 ```sql
 SHOW TABLES IN hack_hours_dbws.v01;
+```
+![Step 7](media/show-tables.png)
+```sql
 SELECT * FROM hack_hours_dbws.v01.products LIMIT 5;
 ```
+![Step 7](media/products-table.png)
 
-### 8. Use Genie ✨
-Ask natural questions like:  
-- “Top 5 products by price”  
-- “List customers from California”  
+#### Where to run these queries in Databricks
+
+You can execute the SQL above in Databricks using any of the following:
+
+- Databricks SQL (SQL Editor)
+  - Open the SQL workspace (SQL in the left nav).
+  - Connect to a running SQL warehouse.
+  - Create a new query, paste the SQL, and click Run.
+
+- Databricks Notebook
+  - Create/open a notebook and either:
+    - Set the notebook language to SQL and paste the queries into cells, or
+    - Use SQL cell magic:
+```sql
+%sql
+SHOW TABLES IN hack_hours_dbws.v01;
+```
+    - Or run via Spark in Python:
+```python
+%python
+display(spark.sql("SELECT * FROM hack_hours_dbws.v01.products LIMIT 5"))
+```
+  - Attach the notebook to a running cluster.
+
+- Data Explorer / Table preview
+  - Go to Data -> Tables, locate hack_hours_dbws.v01.products and use the Preview or Query Table option.
+
+Notes and tips:
+- If using Unity Catalog, keep using fully qualified names (catalog.schema.table) as shown.
+- Ensure you have the required permissions and a running SQL warehouse or cluster.
+- To avoid fully-qualified names in a session, you can set a default catalog/schema:
+```sql
+USE CATALOG hack_hours_dbws;
+USE SCHEMA v01;
+```
 
 ---
 
@@ -85,13 +126,14 @@ Ask natural questions like:
 ### 3. Upload Data
 ![Fabric Step 3](media/41226fb0-a5c1-45f0-9bba-8f9147e29e34.png)  
 Upload: `products.csv`, `customers.csv`, `orders.csv`, `opportunities.csv`.  
+![Fabric Step 3](media/a876c128-2a93-4176-9f58-aea9595b9613.png)  
 
 ### 4. Load Files into Tables
-![Fabric Step 4](media/a876c128-2a93-4176-9f58-aea9595b9613.png)  
+![Fabric Step 4](media/00bb60e9-398c-4073-93a3-513f1640af85.png) 
 Right-click each CSV → **Load to Tables → New table**.  
 
 ### 5. Verify Tables
-![Fabric Step 5](media/00bb60e9-398c-4073-93a3-513f1640af85.png)  
+![Fabric Step 4](media/02a3f0f4-d4b4-46ee-9620-0e674fe70f23.png) 
 Tables `products`, `customers`, `orders`, `opportunities` should appear under **Tables**.  
 
 ---
