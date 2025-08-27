@@ -1,5 +1,4 @@
-# 🏆 Hack Hours – AI/ML Edition  
-**Databricks Genie + Microsoft Fabric**
+# 🏆 Hack Hours – AI/ML Edition – Genie + Fabric Data Agent
 
 Welcome to the **Compete Hack Hours – AI/ML Edition**!  
 This repository contains all resources and setup guides to prepare your environment in **Databricks Genie** and **Microsoft Fabric** for hands-on exploration of AI/BI.  
