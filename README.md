@@ -125,6 +125,7 @@ USE SCHEMA v01;
 ### 3. Upload Data
 ![Fabric Step 3](media/41226fb0-a5c1-45f0-9bba-8f9147e29e34.png)  
 Upload: `products.csv`, `customers.csv`, `orders.csv`, `opportunities.csv`.  
+
 ![Fabric Step 3](media/a876c128-2a93-4176-9f58-aea9595b9613.png)  
 
 ### 4. Load Files into Tables
@@ -134,6 +135,13 @@ Right-click each CSV → **Load to Tables → New table**.
 ### 5. Verify Tables
 ![Fabric Step 4](media/02a3f0f4-d4b4-46ee-9620-0e674fe70f23.png) 
 Tables `products`, `customers`, `orders`, `opportunities` should appear under **Tables**.  
+
+### 6. Create a Semantic Model
+![Fabric Step 5](media/create-semantic-model.png)  
+- In your Lakehouse workspace, click **New semantic model**.  
+- Select the tables you loaded (`products`, `customers`, `orders`, `opportunities`).  
+- Click **Create** to generate the semantic model.  
+- You can now use this model for Power BI reports and AI-powered insights in Fabric.  
 
 ---
 
