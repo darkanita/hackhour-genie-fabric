@@ -3,6 +3,10 @@
 Welcome to the **Compete Hack Hours – AI/ML Edition**!  
 This repository contains all resources and setup guides to prepare your environment in **Databricks Genie** and **Microsoft Fabric** for hands-on exploration of AI/BI.  
 
+## 📑 Slides
+
+[Download the Hack Hours Slides (PDF)](media/hackhours-slides.pdf)
+
 ---
 
 ## ✅ Prerequisites
