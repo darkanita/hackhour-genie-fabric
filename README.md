@@ -7,6 +7,7 @@ This repository contains all resources and setup guides to prepare your environm
 
 [Download the Hack Hours Slides (PDF)](media/hackhours-slides.pdf)
 
+> **Note:** All sample data files (`products.csv`, `customers.csv`, `orders.csv`, `opportunities.csv`) are located in the `data` folder under the **canada_sales** directory of this repository.
 ---
 
 ## ✅ Prerequisites
